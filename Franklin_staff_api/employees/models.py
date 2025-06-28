@@ -7,6 +7,7 @@ class StaffBase(models.Model):
     email = models.EmailField(unique=True)
     phone_number= models.CharField(max_length=10)
     state = models.CharField(max_length=100)
+    address = models.OneToOneField(Address, on_delete=models.SET_NULL, null=True, blank=True)
 
     class Meta:
         abstract = True
@@ -32,7 +33,18 @@ class Intern(StaffBase):
     mentor = models.ForeignKey(Manager, on_delete=models.CASCADE)
     phone_number= models.CharField(max_length=10)
     internship_end = models.DateField()
+    address = models.OneToOneField(Address, on_delete=models.SET_NULL, null=True, blank=True)
 
     def get_role(self):
         return "Intern"
+    
+class Address(models.Model):
+    street = models.CharField(max_length=100)
+    city = models.CharField(max_length=50)
+    state = models.CharField(max_length=50)
+    postal_code = models.CharField(max_length=20)
+    country = models.CharField(max_length=50)
+
+    def __str__(self):
+        return f"{self.street}, {self.city}, {self.country}"
 # Create your models here.
