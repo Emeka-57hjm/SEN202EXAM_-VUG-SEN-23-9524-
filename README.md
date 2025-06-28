@@ -6,4 +6,4 @@
 |**Name**       | **Github username that links to account**         | **Matric Number** |
 |---------------|---------------------------------------------------|-------------------|
 
-|**FranklinEmeka**	|[Emeka-57hjm](https://github.com/Emeka-57hjm/)  |VUG/SEN/23/9524 |
+|**FranklinChukwuemeka**	|[Emeka-57hjm](https://github.com/Emeka-57hjm/)  |VUG/SEN/23/9524 |
