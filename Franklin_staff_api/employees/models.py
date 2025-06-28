@@ -46,4 +46,5 @@ class Address(models.Model):
 
     def __str__(self):
         return f"{self.street}, {self.city}, {self.country}"
+    ##super user- username-user email-chukwuemekaf938@gmail.com password-qwer1234
 # Create your models here.
